@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between" *ngFor="let plat of plats">
+    {{ plat.values.name }}
+
+    <button class="col-sm-2 offset-sm-3 text-center btn btn-primary btn-block" type="submit" (click)="editPlat(plat.key)">Ajouter au panier</button>
+    <button class="col-sm-2 offset-sm-3 text-center btn btn-info btn-block" type="submit" (click)="editPlat(plat.key)">Modifier</button>
+    <button class="col-sm-2 offset-sm-3 text-center btn btn-danger btn-block" type="submit" (click)="deletePlat(plat.key)">Supprimer</button>
+  </li>
+</ul>
