@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*Secondary color - buttons*/
+.btn-info {
+    background-color: #f9aa33 !important;
+    color: #fff !important;
+}
+
+/*Secondary color - input shadow on focus*/
+select option:hover,
+    select option:focus,
+    select option:active {
+        border-color: #f9aa33;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #f9aa33;
+  outline: 0 none;
+    }
+
+.form-control:focus {  
+  border-color: #f9aa33;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #f9aa33;
+  outline: 0 none;
+}

@@ -1,0 +1,27 @@
+<form class="col-sm-6 offset-sm-3 text-center border border-light p-5" (ngSubmit)="addPlat(newPlat)" #newPlat="ngForm">
+  <p class="h4 mb-4">Ajouter un plat</p>
+  <input type="text" name="name" class="form-control mb-4" placeholder="Nom du plat" ngModel>
+  <input type="number" name="price" class="form-control mb-4"  min="1" max="15" placeholder="Prix" ngModel>
+
+  <label>Cat&eacute;gorie</label>
+  <select class="browser-default custom-select mb-4" name="category" ngModel>
+    <option value="" disabled>Choisir une cat&eacute;gorie</option>
+    <option value="starter" selected>Entr&eacute;e</option>
+    <option value="dish">Plat</option>
+    <option value="dessert">Dessert</option>
+    <option value="drink">Boisson</option>
+  </select>
+
+  <label>Type</label>
+  <select class="browser-default custom-select mb-4" name="type" ngModel>
+    <option value="" disabled>Choisir un type</option>
+    <option value="hot" selected>Chaud</option>
+    <option value="cold">Froid</option>
+  </select>
+
+  <div class="form-group">
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Description" name="description" ngModel></textarea>
+  </div>
+
+  <button class="col-sm-6 offset-sm-3 text-center btn btn-info btn-block" type="submit">Ajouter</button>
+</form>
