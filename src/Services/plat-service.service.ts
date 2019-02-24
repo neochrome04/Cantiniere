@@ -42,6 +42,16 @@ export class PlatServiceService {
                 tap(data => JSON.stringify(data)),
                 catchError(this.handleError('getPlatByKey', []))
             );
+}
+    //Suppression du plat par sa key
+    deletePlat(key: string): Observable<Plat[]> {
+      const url = `https://cantiniere-e685c.firebaseio.com/cantiniere-e685c/` + key + '.json';
+      this.http.delete<Plat[]>(url)
+      .pipe(
+        tap(data => data),
+        catchError(this.handleError('deletePlat'))
+    );
+    console.log(key);
     }
     /**
      * Handle Http operation that failed.
